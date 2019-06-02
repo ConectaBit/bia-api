@@ -1,0 +1,28 @@
+{
+  "name": "bia-api",
+  "version": "1.0.0",
+  "description": "rest api for IFPI academic works using scraping on BIA repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConectaBit/bia-api.git"
+  },
+  "keywords": [
+    "academic",
+    "works",
+    "api",
+    "ifpi"
+  ],
+  "author": "jrquadros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConectaBit/bia-api/issues"
+  },
+  "homepage": "https://github.com/ConectaBit/bia-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
