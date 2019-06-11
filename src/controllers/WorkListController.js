@@ -14,40 +14,54 @@ module.exports = {
     let datas = [],
       titles = [],
       authors = [],
-      uris = [],
-      result = [];
+      uris = [];
 
-    for (let i = 0; i < 10; i++) {
-      datas.push(
-        $("tr [headers=t1]")
-          .eq(i)
-          .text()
-      );
-    }
+    const setDatas = () => {
+      for (let i = 0; i < 10; i++) {
+        datas.push(
+          $("tr [headers=t1]")
+            .eq(i)
+            .text()
+        );
+      }
+    };
 
-    for (let i = 0; i < 10; i++) {
-      titles.push(
-        $("tr [headers=t2]")
-          .eq(i)
-          .text()
-      );
-    }
+    const setTitles = () => {
+      for (let i = 0; i < 10; i++) {
+        titles.push(
+          $("tr [headers=t2]")
+            .eq(i)
+            .text()
+        );
+      }
+    };
 
-    for (let i = 0; i < 10; i++) {
-      authors.push(
-        $("tr [headers=t3]")
-          .eq(i)
-          .text()
-      );
-    }
+    const setAuthors = () => {
+      for (let i = 0; i < 10; i++) {
+        authors.push(
+          $("tr [headers=t3]")
+            .eq(i)
+            .text()
+        );
+      }
+    };
 
-    for (let i = 0; i < 10; i++) {
-      uris.push(
-        $("tr a")
-          .eq(i)
-          .attr("href")
-      );
-    }
+    const setUris = () => {
+      for (let i = 0; i < 10; i++) {
+        uris.push(
+          $("tr a")
+            .eq(i)
+            .attr("href")
+        );
+      }
+    };
+
+    let result = [];
+    
+    setDatas();
+    setTitles();
+    setAuthors();
+    setUris();
 
     do {
       result.push({
