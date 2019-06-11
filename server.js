@@ -10,4 +10,4 @@ app.use("/api", require("./src/routes"));
 
 app.listen(porta);
 
-console.log("Server rodando na porta " + porta + " XD");
+console.log("Server rodando na porta " + porta+ " XD");
