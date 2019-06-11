@@ -3,6 +3,7 @@ const routes = express.Router();
 
 const ArticleController = require('../src/controllers/WorkListController');
 
-routes.get('/phisics', ArticleController.show)
+routes.get('/phisics', ArticleController.phisics)
+routes.get('/biology', ArticleController.biology)
 
 module.exports = routes;
