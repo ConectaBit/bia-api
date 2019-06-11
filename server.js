@@ -1,13 +1,11 @@
 const express = require("express");
 
-const porta = 8080;
-
 const app = express();
 
 app.use(express.json());
 
 app.use("/api", require("./src/routes"));
 
-app.listen(porta);
+app.listen(process.env.PORT || 3000);
 
-console.log("Server rodando na porta " + porta+ " XD");
+console.log("Server rodando XD");
