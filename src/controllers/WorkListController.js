@@ -3,8 +3,9 @@ const fetch = require("node-fetch");
 
 module.exports = {
   async phisics(req, res) {
+    let start = req.params.start;
     const articles = await fetch(
-      `http://bia.ifpi.edu.br:8080/jspui/simple-search?query=&filter_field_1=cnpq&filter_type_1=equals&filter_value_1=CIENCIAS+EXATAS+E+DA+TERRA%3A%3AFISICA&sort_by=score&order=desc&rpp=10&etal=0&start=0`
+      `http://bia.ifpi.edu.br:8080/jspui/simple-search?query=&filter_field_1=cnpq&filter_type_1=equals&filter_value_1=CIENCIAS+EXATAS+E+DA+TERRA%3A%3AFISICA&sort_by=score&order=desc&rpp=10&etal=0&start=${start}`
     );
 
     const $ = cheerio.load(await articles.text(), {
@@ -76,8 +77,9 @@ module.exports = {
   },
 
   async biology(req, res) {
+    let start = req.params.start;
     const articles = await fetch(
-      `http://bia.ifpi.edu.br:8080/jspui/simple-search?filterquery=CIENCIAS+BIOLOGICAS&filtername=cnpq&filtertype=equals`
+      `http://bia.ifpi.edu.br:8080/jspui/simple-search?query=&filter_field_1=cnpq&filter_type_1=equals&filter_value_1=CIENCIAS+BIOLOGICAS&sort_by=score&order=desc&rpp=10&etal=0&start=${start}`
     );
 
     const $ = cheerio.load(await articles.text(), {
@@ -149,8 +151,9 @@ module.exports = {
   },
 
   async chemistry(req, res) {
+    let start = req.params.start;
     const articles = await fetch(
-      `http://bia.ifpi.edu.br:8080/jspui/simple-search?filterquery=CIENCIAS+EXATAS+E+DA+TERRA%3A%3AQUIMICA&filtername=cnpq&filtertype=equals`
+      `http://bia.ifpi.edu.br:8080/jspui/simple-search?query=&filter_field_1=cnpq&filter_type_1=equals&filter_value_1=CIENCIAS+EXATAS+E+DA+TERRA%3A%3AQUIMICA&sort_by=score&order=desc&rpp=10&etal=0&start=${start}`
     );
 
     const $ = cheerio.load(await articles.text(), {
@@ -222,8 +225,9 @@ module.exports = {
   },
 
   async mathematics(req, res) {
+    let start = req.params.start;
     const articles = await fetch(
-      `http://bia.ifpi.edu.br:8080/jspui/simple-search?query=&filter_field_1=cnpq&filter_type_1=equals&filter_value_1=CIENCIAS+EXATAS+E+DA+TERRA%3A%3AMATEMATICA&sort_by=score&order=desc&rpp=10&etal=0&start=0`
+      `http://bia.ifpi.edu.br:8080/jspui/simple-search?query=&filter_field_1=cnpq&filter_type_1=equals&filter_value_1=CIENCIAS+EXATAS+E+DA+TERRA%3A%3AMATEMATICA&sort_by=score&order=desc&rpp=10&etal=0&start=${start}`
     );
 
     const $ = cheerio.load(await articles.text(), {
